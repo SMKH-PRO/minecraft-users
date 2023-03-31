@@ -9,6 +9,7 @@ import { MINECRAFT_IMAGE } from "@/utils/constants";
 import PlayerCard from "@/components/player-card";
 import Spinner from "@/components/spinner";
 import { fetchMineCraftUser } from "@/api/services";
+import { AxiosError } from "axios";
 
 
 const Home = () => {
@@ -59,7 +60,7 @@ const Home = () => {
       });
       setUserName("");
     } catch (e: any) {
-      const errorMsg = e.errorMessage;
+      const errorMsg = e instanceof AxiosError ? e.response?.data?.errorMessage : e.errorMessage;
       if (errorMsg) setErrorMsg(errorMsg);
     } finally {
       setLoading(false)
