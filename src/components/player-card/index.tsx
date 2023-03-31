@@ -9,7 +9,7 @@ interface PlayerCardProps {
 
 }
 const PlayerCard = ({ toggleRole, deleteUser, data }: PlayerCardProps) => (
-    <div className="border rounded p-5" key={data.id}>
+    <div className="border rounded p-5 min-w-[270px]" key={data.id}>
         <div className="flex row justify-between items-center">
             <div className="flex row items-center">
                 <img

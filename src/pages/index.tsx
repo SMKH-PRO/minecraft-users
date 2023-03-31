@@ -1,8 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import { Roles, User } from "@/utils/types";
 import { MINECRAFT_IMAGE } from "@/utils/constants";
@@ -83,7 +80,7 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main className="p-1 sm:p-2 md:p-24">
         <div className="w-full">
           <div className="flex row">
             <input
